@@ -79,7 +79,7 @@ To train the model, I used an Adam optimizer with initial learning rate  3e-4 an
 
 The bath size is 32. The maximum number of epochs is 30.
 
-#### 4. The approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+#### 4. The approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. 
 
 My final model results were:
 * training set accuracy of 99.1%
@@ -106,6 +106,8 @@ An iterative approach was chosen:
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
   Dropout is a very important design choice, it significantly reduce the overfitting and allow me getting a 90% accuracy on validation just in several epochs.  
+  
+  Callback is utilized to stop training when the validation accuracy reach the target.
 
 
 ### Test a Model on New Images
