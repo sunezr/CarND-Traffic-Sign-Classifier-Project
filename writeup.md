@@ -26,10 +26,9 @@ The goals / steps of this project are the following:
 
 ### Data Set Summary & Exploration
 
-#### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+#### 1. Provide a basic summary of the data set.
 
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
+I used the numpy library to calculate summary statistics of the traffic signs data set:
 
 * The size of training set is 34799
 * The size of the validation set is 4410
@@ -47,9 +46,9 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 #### 1.  Preprocess the image data.
 
-- shuffle training data
-- grayscaling
-- normalization
+- Shuffle training data:  this method can make sure get training data randomly. If the data in one batch is the same label, then the weight update toward one direction may become too large. It is more like stochastic rather than mini-batch 
+- Gray scaling: gray scale image is easier to recognize if the color does not have significant influence. It can help getting a decent accuracy quickly(it serve as a layer with fixed weight), but may lose the information of color and may get stuck when accuracy is high enough.
+- Normalization: normalization can make weight update more efficient
 
 
 #### 2. Model architecture 
